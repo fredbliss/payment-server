@@ -1,0 +1,40 @@
+{
+  "name": "payment-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha -t 20000 --compilers js:babel-register test/**/*.js --env=test",
+    "test:fast": "mocha -t 20000 --compilers js:babel-register test/**/*.js --env=test --grep=@fast",
+    "start": "nodemon server.js --exec ./node_modules/.bin/babel-node --presets es2015,stage-2 --env=dev",
+    "start-prod": "nodemon server.js --exec ./node_modules/.bin/babel-node --presets es2015,stage-2 --env=prod",
+    "start-qa": "nodemon server.js --exec ./node_modules/.bin/babel-node --presets es2015,stage-2 --env=qa"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "firebase-admin": "^4.0.4",
+    "mailchimp-api": "^2.0.7",
+    "mailgun-js": "^0.7.14",
+    "morgan": "^1.7.0",
+    "node-uuid": "^1.4.7",
+    "nodemon": "^1.11.0",
+    "rxjs": "^5.0.0-rc.4",
+    "stripe": "^4.14.0",
+    "supertest": "^2.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-plugin-import": "^2.2.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^3.2.0"
+  }
+}
